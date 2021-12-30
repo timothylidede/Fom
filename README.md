@@ -3,7 +3,9 @@
 A social media Android app that allows peers to know where the week's events will be.
 
 Keeping up with where friends will be in the recent future has never been faster and easier.
+
 Make connections, join packs with your friends; and through them, make connections with their friends.
+
 Have options on where you want to have a good time in the next few days.
 
 # Features on the App include
