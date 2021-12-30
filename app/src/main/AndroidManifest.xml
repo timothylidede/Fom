@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.savala.fom">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Likes"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ViewMyself"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PostLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PackMembers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TheirPacks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddPackMember"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PackChat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewPack"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TheirConnection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreatePack"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyPacks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyConnections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp.EmailAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Potentials"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FomSplashScreen"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBnDxwT9pQwYXE0fHThK2oRwRQQLgbQcPI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".SignUp.Username"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SignUp.Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp.Birthday"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp.Name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sign"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

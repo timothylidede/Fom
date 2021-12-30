@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#C4ECEC"
+    android:layout_width="match_parent"
+    android:background="@drawable/connect_gradient_list"
+    android:layout_height="match_parent"
+    android:id="@+id/view_connect"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="CONNECT"
+            android:textStyle="bold"
+            android:textColor="#01534F"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:id="@+id/create_pack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/create_pack"/>
+
+        <ImageView
+            android:id="@+id/view_myself"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/edit"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="110dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/connect_top_tab"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#E4F8F8">
+
+                <view.ConnectionsTopTabsView
+                    android:id="@+id/top_tab"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="#C9FFFF"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/am_connections_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha=".5"
+                        android:background="@color/fomblue" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager_connections"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

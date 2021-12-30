@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="20dp"
+    app:cardCornerRadius="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_height="285dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/post_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_post_pack_name"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posted on"
+                android:layout_toLeftOf="@+id/row_post_timestamp"
+                android:layout_marginTop="8dp"
+                android:alpha=".7"
+                android:layout_marginEnd="5dp"
+                android:textSize="10dp"
+                android:textColor="@color/fomdarkgrey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_post_timestamp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:alpha=".7"
+                android:textSize="10dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/fomdarkgrey"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/row_post_location"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/background_pic">
+
+                <com.google.android.gms.maps.MapView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:apiKey="@string/google_api_key"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:id="@+id/map_view"
+                    tools:context=".PostLocation" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginEnd="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/date_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/fomblue"
+                    android:text="Date:"/>
+
+                <TextView
+                    android:id="@+id/row_post_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12dp"
+                    android:layout_toRightOf="@+id/date_title"
+                    android:textColor="@color/black" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginEnd="110dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/time_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="@color/fomblue"
+                    android:layout_marginStart="20dp"
+                    android:text="Time:"/>
+
+                <TextView
+                    android:id="@+id/row_post_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:layout_toRightOf="@+id/time_title"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:id="@+id/post_not_liked"
+            android:layout_width="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="40dp"
+            android:layout_marginTop="-5dp"
+            android:src="@drawable/fom_grey"/>
+
+        <ImageView
+            android:id="@+id/post_liked"
+            android:layout_alignParentEnd="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-5dp"
+            android:src="@drawable/fom_red"/>
+
+        <TextView
+            android:id="@+id/row_post_count"
+            android:layout_width="wrap_content"
+            android:layout_alignRight="@+id/post_liked"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_not_liked"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/view_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toLeftOf="@id/post_not_liked"
+            android:alpha=".5"
+            android:text="View"
+            android:textSize="13dp"
+            android:textColor="@color/fomblue"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

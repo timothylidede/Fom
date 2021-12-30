@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#FAE7F0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_activity"
+    android:background="@drawable/activity_gradient_list"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="ACTIVITY"
+            android:textStyle="bold"
+            android:textColor="#730237"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_settings"/>
+
+        <ImageView
+            android:id="@+id/potentials"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_baseline_person_pin_24"/>
+
+        <ImageView
+            android:id="@+id/have_potentials"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="invisible"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/have_potential"/>
+
+        <ImageView
+            android:id="@+id/have_potentials_circle"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:visibility="invisible"
+            android:layout_below="@+id/have_potentials"
+            android:layout_marginRight="9dp"
+            android:layout_alignRight="@+id/have_potentials"
+            android:src="@drawable/ic_baseline_circle_24"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="110dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/activity_top_tab"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background_topbar">
+
+                <view.ActivityTopTabsView
+                    android:id="@+id/top_tab"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@color/background_topbar"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/am_activity_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha=".5"
+                        android:background="@color/fompink" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/view_pager_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

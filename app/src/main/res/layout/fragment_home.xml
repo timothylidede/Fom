@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:orientation="vertical"
+    tools:context=".FomActivity">
+
+    <ImageView
+        android:id="@+id/view_myself"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_baseline_manage_accounts"/>
+
+    <ImageView
+        android:id="@+id/my_packs"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_toLeftOf="@id/view_myself"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/my_packs"/>
+
+    <ImageView
+        android:id="@+id/my_connections"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_toLeftOf="@id/my_packs"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/ic_baseline_connect_without_contact_24"/>
+
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/background_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="90dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout3"
+            android:background="@drawable/gradient_list">
+
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/progress_bar"/>
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginEnd="20dp">
+
+                    <SearchView
+                        android:id="@+id/fom_activity_search_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:iconifiedByDefault="true"
+                        android:queryHint="Search places"
+                        android:background="#C9FFFF"
+                        android:searchIcon="@drawable/ic_baseline_search_24"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="true"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_below="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/feed_posts"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/row_post"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                    </RelativeLayout>
+
+                </ScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

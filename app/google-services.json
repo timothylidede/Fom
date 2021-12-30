@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1074848348245",
+    "project_id": "fom04-a73e6",
+    "storage_bucket": "fom04-a73e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074848348245:android:63e4a6a8679deebb30bcdc",
+        "android_client_info": {
+          "package_name": "com.savala.fom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074848348245-j8jqra802ga2gs3mdoerr4r6o8r1dtrg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.savala.fom",
+            "certificate_hash": "970621c95421a909f75bd83d4070b9b4470914b7"
+          }
+        },
+        {
+          "client_id": "1074848348245-11lnluuoum9k1r7g5fvh4ft7k7r1uhr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLM-aEEzOVuV0DoXfuLtc1wQR1t2YwU84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074848348245-11lnluuoum9k1r7g5fvh4ft7k7r1uhr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
