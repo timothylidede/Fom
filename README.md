@@ -8,6 +8,14 @@ Make connections, join packs with your friends; and through them, make connectio
 
 Have options on where you want to have a good time in the next few days.
 
+# IDE
+
+* Android Studio
+
+# Database
+
+* Firebase Database
+
 # Features on the App include
 
 * Connect with friends and meet new people in your network.
